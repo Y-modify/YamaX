@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>yamax_description</name>
+  <version>0.0.1</version>
+  <description>The yamax_description package</description>
+
+  <maintainer email="me@coord-e.com">coord.e</maintainer>
+  <license>MIT</license>
+
+  <url type="website">https://github.com/Y-modify/yamax</url>
+
+  <author email="me@coord-e.com">coord.e</author>
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

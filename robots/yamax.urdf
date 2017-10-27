@@ -1,0 +1,723 @@
+<?xml version="1.0"?>
+<robot name="yamax">
+  <material name="aluminium">
+    <color rgba="0.5820 0.6445 0.6484 1.0"/>
+  </material>
+  <material name="mdf">
+    <color rgba="0.8984 0.4922 0.1328 1.0"/>
+  </material>
+  <material name="motor">
+    <color rgba="0.1718 0.2421 0.3125 1.0"/>
+  </material>
+
+  <link name="head">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.023" />
+      </geometry>
+      <material name="aluminium" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.035 0.023" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0120" />
+      <inertia ixx="0.00000175" ixy="0" ixz="0" iyy="0.00000175" iyz="0" izz="0.00000245" />
+    </inertial>
+  </link>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.11 0.094" />
+      </geometry>
+      <material name="aluminium" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.11 0.094" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.233" />
+      <inertia ixx="0.000407" ixy="0" ixz="0" iyy="0.000220" iyz="0" izz="0.000283" />
+    </inertial>
+  </link>
+
+  <link name="arm_right_virtual" />
+
+  <link name="arm_right_1">
+    <visual>
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.09" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.09" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00914" />
+      <inertia ixx="0.00000647" ixy="0" ixz="0" iyy="0.00000618" iyz="0" izz="3.17e-7" />
+    </inertial>
+  </link>
+
+  <link name="arm_right_2">
+    <visual>
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.06" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.06" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00355" />
+      <inertia ixx="0.00000118" ixy="0" ixz="0" iyy="0.00000107" iyz="0" izz="1.23e-7" />
+    </inertial>
+  </link>
+
+  <link name="arm_left_virtual" />
+
+  <link name="arm_left_1">
+    <visual>
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.09" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.09" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00914" />
+      <inertia ixx="0.00000647" ixy="0" ixz="0" iyy="0.00000618" iyz="0" izz="3.17e-7" />
+    </inertial>
+  </link>
+
+  <link name="arm_left_2">
+    <visual>
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.06" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.06" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00355" />
+      <inertia ixx="0.00000118" ixy="0" ixz="0" iyy="0.00000107" iyz="0" izz="1.23e-7" />
+    </inertial>
+  </link>
+
+  <link name="stomach">
+    <visual>
+      <origin xyz="0 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.053 0.070" />
+      </geometry>
+      <material name="aluminium" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.053 0.070" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.00972" />
+      <inertia ixx="0.00000624" ixy="0" ixz="0" iyy="0.00000633" iyz="0" izz="0.00000464" />
+    </inertial>
+  </link>
+
+  <link name="hip">
+    <visual>
+      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.11 0.004" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.11 0.004" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.072" />
+      <inertia ixx="0.0000727" ixy="0" ixz="0" iyy="0.0000151" iyz="0" izz="0.0000876" />
+    </inertial>
+  </link>
+
+  <link name="hip_right">
+    <visual>
+      <origin xyz="0 0 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.045" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.045" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.131" />
+      <inertia ixx="0.0000442" ixy="0" ixz="0" iyy="0.0000551" iyz="0" izz="0.0000551" />
+    </inertial>
+  </link>
+
+  <link name="leg_right_1">
+    <visual>
+      <origin xyz="0 0 -0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.045 0.023" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.045 0.023" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0599" />
+      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000127" iyz="0" izz="0.0000202" />
+    </inertial>
+  </link>
+
+  <link name="leg_right_2">
+    <visual>
+      <origin xyz="0 0 -0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.060 0.035" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.060 0.035" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0036" />
+      <inertia ixx="0.0000014475" ixy="0" ixz="0" iyy="5.127e-7" iyz="0" izz="0.0000012252" />
+    </inertial>
+  </link>
+
+  <link name="leg_right_3">
+    <visual>
+      <origin xyz="0 0 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.042" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.042" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.131" />
+      <inertia ixx="0.00003504825" ixy="0" ixz="0" iyy="0.00004429825" iyz="0" izz="0.0000467125" />
+    </inertial>
+  </link>
+
+  <link name="hip_left">
+    <visual>
+      <origin xyz="0 0 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.045" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.045" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.131" />
+      <inertia ixx="0.0000442" ixy="0" ixz="0" iyy="0.0000551" iyz="0" izz="0.0000551" />
+    </inertial>
+  </link>
+
+  <link name="leg_left_1">
+    <visual>
+      <origin xyz="0 0 -0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.045 0.023" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.045 0.023" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0599" />
+      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000127" iyz="0" izz="0.0000202" />
+    </inertial>
+  </link>
+
+  <link name="leg_left_2">
+    <visual>
+      <origin xyz="0 0 -0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.060 0.035" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.060 0.035" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0036" />
+      <inertia ixx="0.0000014475" ixy="0" ixz="0" iyy="5.127e-7" iyz="0" izz="0.0000012252" />
+    </inertial>
+  </link>
+
+  <link name="leg_left_3">
+    <visual>
+      <origin xyz="0 0 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.042" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.045 0.042" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.131" />
+      <inertia ixx="0.00003504825" ixy="0" ixz="0" iyy="0.00004429825" iyz="0" izz="0.0000467125" />
+    </inertial>
+  </link>
+
+  <link name="foot_right">
+    <visual>
+      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.090 0.060 0.004" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.090 0.060 0.004" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0209" />
+      <inertia ixx="0.000006297866666666666" ixy="0" ixz="0" iyy="0.000014135366666666665" iyz="0" izz="0.000020377499999999996" />
+    </inertial>
+  </link>
+
+  <link name="foot_left">
+    <visual>
+      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.090 0.060 0.004" />
+      </geometry>
+      <material name="mdf" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.090 0.060 0.004" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0209" />
+      <inertia ixx="0.000006297866666666666" ixy="0" ixz="0" iyy="0.000014135366666666665" iyz="0" izz="0.000020377499999999996" />
+    </inertial>
+  </link>
+
+
+  <joint name="neck" type="revolute">
+    <parent link="base_link"/>
+    <child link="head"/>
+
+    <origin xyz="-0.004 0 0.070" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="neck_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="neck">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="A">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="shoulder_right_x" type="revolute">
+    <parent link="base_link"/>
+    <child link="arm_right_virtual"/>
+
+    <origin xyz="0.025 -0.075 0.040" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="shoulder_right_x_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="shoulder_right_x">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="E">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="shoulder_right_z" type="revolute">
+    <parent link="arm_right_virtual"/>
+    <child link="arm_right_1"/>
+
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="shoulder_right_z_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="shoulder_right_z">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="F">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="shoulder_left_x" type="revolute">
+    <parent link="base_link"/>
+    <child link="arm_left_virtual"/>
+
+    <origin xyz="0.025 0.075 0.040" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="shoulder_left_x_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="shoulder_left_x">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="B">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="shoulder_left_z" type="revolute">
+    <parent link="arm_left_virtual"/>
+    <child link="arm_left_1"/>
+
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="shoulder_left_z_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="shoulder_left_z">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="C">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="elbow_right" type="revolute">
+    <parent link="arm_right_1"/>
+    <child link="arm_right_2"/>
+
+    <origin xyz="-0.010 -0.020 -0.080" rpy="0 0 -1.5708" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="elbow_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="elbow_right">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="G">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="elbow_left" type="revolute">
+    <parent link="arm_left_1"/>
+    <child link="arm_left_2"/>
+
+    <origin xyz="-0.010 0.020 -0.080" rpy="0 0 -1.5708" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="elbow_left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="elbow_left">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="D">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="backbone_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="stomach"/>
+
+    <origin xyz="0.004 0 -0.020" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="backbone_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="backbone_1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="H">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="backbone_2" type="revolute">
+    <parent link="stomach"/>
+    <child link="hip"/>
+
+    <origin xyz="0 0 -0.065" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="backbone_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="backbone_2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="I">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="hip_joint_right_z" type="revolute">
+    <parent link="hip"/>
+    <child link="hip_right"/>
+
+    <origin xyz="0 -0.035 -0.017" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="hip_joint_right_z_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hip_joint_right_z">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="K">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="hip_joint_right_x" type="revolute">
+    <parent link="hip_right"/>
+    <child link="leg_right_1"/>
+
+    <origin xyz="0.010 0 -0.050" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="hip_joint_right_x_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hip_joint_right_x">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="L">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="hip_joint_left_z" type="revolute">
+    <parent link="hip"/>
+    <child link="hip_left"/>
+
+    <origin xyz="0 0.035 -0.017" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="hip_joint_left_z_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hip_joint_left_z">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Q">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="hip_joint_left_x" type="revolute">
+    <parent link="hip_left"/>
+    <child link="leg_left_1"/>
+
+    <origin xyz="0.010 0 -0.050" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="hip_joint_left_zxtrans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hip_joint_left_x">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="R">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="knee_right" type="revolute">
+    <parent link="leg_right_1"/>
+    <child link="leg_right_2"/>
+
+    <origin xyz="-0.010 0 -0.010" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="knee_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="knee_right">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="M">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="knee_left" type="revolute">
+    <parent link="leg_left_1"/>
+    <child link="leg_left_2"/>
+
+    <origin xyz="-0.010 0 -0.010" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="knee_left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="knee_left">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="S">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="ankle_1_right" type="revolute">
+    <parent link="leg_right_2"/>
+    <child link="leg_right_3"/>
+
+    <origin xyz="0 0 -0.020" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="ankle_1_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ankle_1_right">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="N">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="ankle_1_left" type="revolute">
+    <parent link="leg_left_2"/>
+    <child link="leg_left_3"/>
+
+    <origin xyz="0 0 -0.020" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="ankle_1_left_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ankle_1_left">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="T">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="ankle_2_right" type="revolute">
+    <parent link="leg_right_3"/>
+    <child link="foot_right"/>
+
+    <origin xyz="0.01 0 -0.055" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="ankle_2_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ankle_2_right">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="O">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="ankle_2_left" type="revolute">
+    <parent link="leg_left_3"/>
+    <child link="foot_left"/>
+
+    <origin xyz="0.01 0 -0.055" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
+  </joint>
+  <transmission name="ankle_2_right_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ankle_2_right">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="U">
+      <mechanicalReduction>50</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so" />
+  </gazebo>
+</robot>
