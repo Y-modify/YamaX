@@ -1,5 +1,5 @@
 <launch>
-    <arg name="model" />
+    <arg name="model" default="$(find yamax_description)/robots/yamax.urdf" />
     <arg name="gui" default="False" />
     <param name="robot_description" textfile="$(arg model)" />
     <param name="use_gui" value="$(arg gui)"/>
