@@ -506,7 +506,7 @@
   <transmission name="neck_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="neck">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="A">
       <mechanicalReduction>50</mechanicalReduction>
@@ -529,7 +529,7 @@
   <transmission name="shoulder_right_x_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_right_x">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="E">
       <mechanicalReduction>50</mechanicalReduction>
@@ -547,7 +547,7 @@
   <transmission name="shoulder_right_z_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_right_z">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="F">
       <mechanicalReduction>1</mechanicalReduction>
@@ -565,7 +565,7 @@
   <transmission name="shoulder_left_x_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_left_x">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="B">
       <mechanicalReduction>50</mechanicalReduction>
@@ -583,7 +583,7 @@
   <transmission name="shoulder_left_z_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="shoulder_left_z">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="C">
       <mechanicalReduction>50</mechanicalReduction>
@@ -601,7 +601,7 @@
   <transmission name="elbow_right_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="elbow_right">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="G">
       <mechanicalReduction>50</mechanicalReduction>
@@ -619,7 +619,7 @@
   <transmission name="elbow_left_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="elbow_left">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="D">
       <mechanicalReduction>50</mechanicalReduction>
@@ -637,7 +637,7 @@
   <transmission name="backbone_1_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="backbone_1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="H">
       <mechanicalReduction>50</mechanicalReduction>
@@ -655,7 +655,7 @@
   <transmission name="backbone_2_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="backbone_2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="I">
       <mechanicalReduction>50</mechanicalReduction>
@@ -673,7 +673,7 @@
   <transmission name="hip_joint_right_z_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="hip_joint_right_z">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="K">
       <mechanicalReduction>50</mechanicalReduction>
@@ -691,7 +691,7 @@
   <transmission name="hip_joint_right_x_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="hip_joint_right_x">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="L">
       <mechanicalReduction>50</mechanicalReduction>
@@ -709,7 +709,7 @@
   <transmission name="hip_joint_left_z_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="hip_joint_left_z">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="Q">
       <mechanicalReduction>50</mechanicalReduction>
@@ -727,7 +727,7 @@
   <transmission name="hip_joint_left_zxtrans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="hip_joint_left_x">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="R">
       <mechanicalReduction>50</mechanicalReduction>
@@ -745,7 +745,7 @@
   <transmission name="knee_right_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="knee_right">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="M">
       <mechanicalReduction>50</mechanicalReduction>
@@ -763,7 +763,7 @@
   <transmission name="knee_left_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="knee_left">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="S">
       <mechanicalReduction>50</mechanicalReduction>
@@ -781,7 +781,7 @@
   <transmission name="ankle_1_right_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="ankle_1_right">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="N">
       <mechanicalReduction>50</mechanicalReduction>
@@ -799,7 +799,7 @@
   <transmission name="ankle_1_left_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="ankle_1_left">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="T">
       <mechanicalReduction>50</mechanicalReduction>
@@ -817,7 +817,7 @@
   <transmission name="ankle_2_right_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="ankle_2_right">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="O">
       <mechanicalReduction>50</mechanicalReduction>
@@ -835,7 +835,7 @@
   <transmission name="ankle_2_left_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="ankle_2_left">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="U">
       <mechanicalReduction>50</mechanicalReduction>
