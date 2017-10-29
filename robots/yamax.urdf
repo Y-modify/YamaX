@@ -29,8 +29,9 @@
       <inertia ixx="0.00000175" ixy="0" ixz="0" iyy="0.00000175" iyz="0" izz="0.00000245" />
     </inertial>
   </link>
+  <link name="base_link" />
 
-  <link name="base_link">
+  <link name="body">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
@@ -376,7 +377,7 @@
 
 
   <joint name="neck" type="revolute">
-    <parent link="base_link"/>
+    <parent link="body"/>
     <child link="head"/>
 
     <origin xyz="-0.004 0 0.070" rpy="0 0 0" />
@@ -393,8 +394,13 @@
     </actuator>
   </transmission>
 
-  <joint name="shoulder_right_x" type="revolute">
+  <joint name="dummy_joint" type="fixed">
     <parent link="base_link"/>
+    <child link="body"/>
+  </joint>
+
+  <joint name="shoulder_right_x" type="revolute">
+    <parent link="body"/>
     <child link="arm_right_virtual"/>
 
     <origin xyz="0.025 -0.075 0.040" rpy="0 0 0" />
