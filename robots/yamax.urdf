@@ -441,12 +441,12 @@
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="F">
-      <mechanicalReduction>50</mechanicalReduction>
+      <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 
   <joint name="shoulder_left_x" type="revolute">
-    <parent link="base_link"/>
+    <parent link="body"/>
     <child link="arm_left_virtual"/>
 
     <origin xyz="0.025 0.075 0.040" rpy="0 0 0" />
