@@ -518,7 +518,7 @@
   </transmission>
 
   <joint name="backbone_1" type="revolute">
-    <parent link="base_link"/>
+    <parent link="body"/>
     <child link="stomach"/>
 
     <origin xyz="0.004 0 -0.020" rpy="0 0 0" />
