@@ -51,7 +51,12 @@
     </inertial>
   </link>
 
-  <link name="arm_right_virtual" />
+  <link name="arm_right_virtual">
+    <inertial>
+      <mass value="0.00457" />
+      <inertia ixx="0.00" ixy="0" ixz="0" iyy="0.00" iyz="0" izz="0.00" />
+    </inertial>
+  </link>
 
   <link name="arm_right_1">
     <visual>
@@ -68,8 +73,8 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.00914" />
-      <inertia ixx="0.00000647" ixy="0" ixz="0" iyy="0.00000618" iyz="0" izz="3.17e-7" />
+      <mass value="0.00457" />
+      <inertia ixx="0.00000324" ixy="0" ixz="0" iyy="0.00000309" iyz="0" izz="1.58e-7" />
     </inertial>
   </link>
 
@@ -93,7 +98,12 @@
     </inertial>
   </link>
 
-  <link name="arm_left_virtual" />
+  <link name="arm_left_virtual">
+    <inertial>
+      <mass value="0.00457" />
+      <inertia ixx="0.00" ixy="0" ixz="0" iyy="0.00" iyz="0" izz="0.00" />
+    </inertial>
+  </link>
 
   <link name="arm_left_1">
     <visual>
@@ -110,8 +120,8 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.00914" />
-      <inertia ixx="0.00000647" ixy="0" ixz="0" iyy="0.00000618" iyz="0" izz="3.17e-7" />
+      <mass value="0.00457" />
+      <inertia ixx="0.00000324" ixy="0" ixz="0" iyy="0.00000309" iyz="0" izz="1.58e-7" />
     </inertial>
   </link>
 
