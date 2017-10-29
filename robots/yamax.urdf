@@ -723,10 +723,10 @@
     <axis xyz="1 0 0" />
     <limit lower="-1.5708" upper="1.5708" effort="10" velocity="10" />
   </joint>
-  <transmission name="ankle_2_right_trans">
+  <transmission name="ankle_2_left_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="ankle_2_right">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <joint name="ankle_2_left">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="U">
       <mechanicalReduction>50</mechanicalReduction>
