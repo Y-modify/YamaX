@@ -29,6 +29,12 @@
       <inertia ixx="0.00000175" ixy="0" ixz="0" iyy="0.00000175" iyz="0" izz="0.00000245" />
     </inertial>
   </link>
+  <gazebo reference="head">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
   <link name="base_link" />
 
   <link name="body">
@@ -50,6 +56,11 @@
       <inertia ixx="0.000407" ixy="0" ixz="0" iyy="0.000220" iyz="0" izz="0.000283" />
     </inertial>
   </link>
+  <gazebo reference="body">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
 
   <link name="arm_right_virtual">
     <inertial>
@@ -77,6 +88,11 @@
       <inertia ixx="0.00000324" ixy="0" ixz="0" iyy="0.00000309" iyz="0" izz="1.58e-7" />
     </inertial>
   </link>
+  <gazebo reference="arm_right_1">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
   <link name="arm_right_2">
     <visual>
@@ -97,6 +113,11 @@
       <inertia ixx="0.00000118" ixy="0" ixz="0" iyy="0.00000107" iyz="0" izz="1.23e-7" />
     </inertial>
   </link>
+  <gazebo reference="arm_right_2">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
   <link name="arm_left_virtual">
     <inertial>
@@ -124,6 +145,11 @@
       <inertia ixx="0.00000324" ixy="0" ixz="0" iyy="0.00000309" iyz="0" izz="1.58e-7" />
     </inertial>
   </link>
+  <gazebo reference="arm_left_1">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
   <link name="arm_left_2">
     <visual>
@@ -144,6 +170,11 @@
       <inertia ixx="0.00000118" ixy="0" ixz="0" iyy="0.00000107" iyz="0" izz="1.23e-7" />
     </inertial>
   </link>
+  <gazebo reference="arm_left_2">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
   <link name="stomach">
     <visual>
@@ -164,6 +195,11 @@
       <inertia ixx="0.00000624" ixy="0" ixz="0" iyy="0.00000633" iyz="0" izz="0.00000464" />
     </inertial>
   </link>
+  <gazebo reference="stomach">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
 
   <link name="hip">
     <visual>
@@ -184,6 +220,11 @@
       <inertia ixx="0.0000727" ixy="0" ixz="0" iyy="0.0000151" iyz="0" izz="0.0000876" />
     </inertial>
   </link>
+  <gazebo reference="hip">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
   <link name="hip_right">
     <visual>
@@ -204,6 +245,11 @@
       <inertia ixx="0.0000442" ixy="0" ixz="0" iyy="0.0000551" iyz="0" izz="0.0000551" />
     </inertial>
   </link>
+  <gazebo reference="hip_right">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
 
   <link name="leg_right_1">
     <visual>
@@ -224,6 +270,11 @@
       <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000127" iyz="0" izz="0.0000202" />
     </inertial>
   </link>
+  <gazebo reference="leg_right_1">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
 
   <link name="leg_right_2">
     <visual>
@@ -244,6 +295,11 @@
       <inertia ixx="0.0000014475" ixy="0" ixz="0" iyy="5.127e-7" iyz="0" izz="0.0000012252" />
     </inertial>
   </link>
+  <gazebo reference="leg_right_2">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
   <link name="leg_right_3">
     <visual>
@@ -264,6 +320,11 @@
       <inertia ixx="0.00003504825" ixy="0" ixz="0" iyy="0.00004429825" iyz="0" izz="0.0000467125" />
     </inertial>
   </link>
+  <gazebo reference="leg_right_3">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
 
   <link name="hip_left">
     <visual>
@@ -284,6 +345,11 @@
       <inertia ixx="0.0000442" ixy="0" ixz="0" iyy="0.0000551" iyz="0" izz="0.0000551" />
     </inertial>
   </link>
+  <gazebo reference="hip_left">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
 
   <link name="leg_left_1">
     <visual>
@@ -304,6 +370,11 @@
       <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000127" iyz="0" izz="0.0000202" />
     </inertial>
   </link>
+  <gazebo reference="leg_left_1">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
 
   <link name="leg_left_2">
     <visual>
@@ -324,6 +395,11 @@
       <inertia ixx="0.0000014475" ixy="0" ixz="0" iyy="5.127e-7" iyz="0" izz="0.0000012252" />
     </inertial>
   </link>
+  <gazebo reference="leg_left_2">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
   <link name="leg_left_3">
     <visual>
@@ -344,6 +420,11 @@
       <inertia ixx="0.00003504825" ixy="0" ixz="0" iyy="0.00004429825" iyz="0" izz="0.0000467125" />
     </inertial>
   </link>
+  <gazebo reference="leg_left_3">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
 
   <link name="foot_right">
     <visual>
@@ -364,6 +445,11 @@
       <inertia ixx="0.000006297866666666666" ixy="0" ixz="0" iyy="0.000014135366666666665" iyz="0" izz="0.000020377499999999996" />
     </inertial>
   </link>
+  <gazebo reference="foot_right">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
   <link name="foot_left">
     <visual>
@@ -384,6 +470,11 @@
       <inertia ixx="0.000006297866666666666" ixy="0" ixz="0" iyy="0.000014135366666666665" iyz="0" izz="0.000020377499999999996" />
     </inertial>
   </link>
+  <gazebo reference="foot_left">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Orange</material>
+  </gazebo>
 
 
   <joint name="neck" type="revolute">
