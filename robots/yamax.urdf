@@ -30,8 +30,9 @@
     </inertial>
   </link>
   <gazebo reference="head">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Grey</material>
   </gazebo>
 
@@ -57,8 +58,9 @@
     </inertial>
   </link>
   <gazebo reference="body">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Grey</material>
   </gazebo>
 
@@ -89,8 +91,9 @@
     </inertial>
   </link>
   <gazebo reference="arm_right_1">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
@@ -114,8 +117,9 @@
     </inertial>
   </link>
   <gazebo reference="arm_right_2">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
@@ -146,8 +150,9 @@
     </inertial>
   </link>
   <gazebo reference="arm_left_1">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
@@ -171,8 +176,9 @@
     </inertial>
   </link>
   <gazebo reference="arm_left_2">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
@@ -196,8 +202,9 @@
     </inertial>
   </link>
   <gazebo reference="stomach">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Grey</material>
   </gazebo>
 
@@ -221,8 +228,9 @@
     </inertial>
   </link>
   <gazebo reference="hip">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
@@ -246,8 +254,9 @@
     </inertial>
   </link>
   <gazebo reference="hip_right">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
 
@@ -271,8 +280,9 @@
     </inertial>
   </link>
   <gazebo reference="leg_right_1">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
 
@@ -296,8 +306,9 @@
     </inertial>
   </link>
   <gazebo reference="leg_right_2">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>false</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
@@ -321,8 +332,9 @@
     </inertial>
   </link>
   <gazebo reference="leg_right_3">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
 
@@ -346,8 +358,9 @@
     </inertial>
   </link>
   <gazebo reference="hip_left">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
 
@@ -371,8 +384,9 @@
     </inertial>
   </link>
   <gazebo reference="leg_left_1">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
 
@@ -396,8 +410,9 @@
     </inertial>
   </link>
   <gazebo reference="leg_left_2">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>false</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
@@ -421,8 +436,9 @@
     </inertial>
   </link>
   <gazebo reference="leg_left_3">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
 
@@ -446,8 +462,9 @@
     </inertial>
   </link>
   <gazebo reference="foot_right">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
@@ -471,8 +488,9 @@
     </inertial>
   </link>
   <gazebo reference="foot_left">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+    <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
 
