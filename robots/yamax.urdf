@@ -221,7 +221,7 @@
   <gazebo reference="stomach">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <selfCollide>true</selfCollide>
+    <selfCollide>false</selfCollide>
     <material>Gazebo/Grey</material>
   </gazebo>
 
