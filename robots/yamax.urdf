@@ -860,10 +860,16 @@
   </transmission>
 
   <gazebo>
+    <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+      <robotNamespace>/yamax</robotNamespace>
+      <frameName>map</frameName>
+      <bodyName>body</bodyName>
+      <topicName>odom</topicName>
+      <updateRate>30.0</updateRate>
+    </plugin>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
       <robotNamespace>/yamax</robotNamespace>
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-      <controlPeriod>0.001</controlPeriod>
     </plugin>
   </gazebo>
 </robot>
