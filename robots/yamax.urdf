@@ -33,9 +33,9 @@
   <gazebo reference="head">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Grey</material>
@@ -66,9 +66,9 @@
   <gazebo reference="body">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Grey</material>
@@ -122,9 +122,9 @@
   <gazebo reference="arm_right_1">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
@@ -153,9 +153,9 @@
   <gazebo reference="arm_right_2">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
@@ -192,9 +192,9 @@
   <gazebo reference="arm_left_1">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
@@ -223,9 +223,9 @@
   <gazebo reference="arm_left_2">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
@@ -254,9 +254,9 @@
   <gazebo reference="stomach">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>false</selfCollide>
     <material>Gazebo/Grey</material>
@@ -285,9 +285,9 @@
   <gazebo reference="hip">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
@@ -316,9 +316,9 @@
   <gazebo reference="hip_right">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
@@ -347,9 +347,9 @@
   <gazebo reference="leg_right_1">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
@@ -378,9 +378,9 @@
   <gazebo reference="leg_right_2">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>false</selfCollide>
     <material>Gazebo/Orange</material>
@@ -409,9 +409,9 @@
   <gazebo reference="leg_right_3">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
@@ -440,9 +440,9 @@
   <gazebo reference="hip_left">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
@@ -471,9 +471,9 @@
   <gazebo reference="leg_left_1">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
@@ -502,9 +502,9 @@
   <gazebo reference="leg_left_2">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>false</selfCollide>
     <material>Gazebo/Orange</material>
@@ -533,9 +533,9 @@
   <gazebo reference="leg_left_3">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
@@ -564,9 +564,9 @@
   <gazebo reference="foot_right">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
@@ -595,9 +595,9 @@
   <gazebo reference="foot_left">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-    <maxVel>0.0</maxVel>
-    <minDepth>0.0001</minDepth>
-    <kp>10000.0</kp>
+    <maxVel>100.0</maxVel>
+    <minDepth>0.0</minDepth>
+    <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
