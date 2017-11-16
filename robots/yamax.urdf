@@ -27,12 +27,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.0120" />
-      <inertia ixx="0.00000175" ixy="0" ixz="0" iyy="0.00000175" iyz="0" izz="0.00000245" />
+      <inertia ixx="0.00000175" ixy="0" ixz="0" iyy="0.00000245" iyz="0" izz="0.00000175" />
     </inertial>
   </link>
   <gazebo reference="head">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Grey</material>
   </gazebo>
@@ -56,12 +60,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.233" />
-      <inertia ixx="0.000407" ixy="0" ixz="0" iyy="0.000220" iyz="0" izz="0.000283" />
+      <inertia ixx="0.000220" ixy="0" ixz="0" iyy="0.000283" iyz="0" izz="0.000407" />
     </inertial>
   </link>
   <gazebo reference="body">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Grey</material>
     <sensor name="imu_sensor" type="imu">
@@ -87,7 +95,7 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.00457" />
-      <inertia ixx="0.00" ixy="0" ixz="0" iyy="0.00" iyz="0" izz="0.00" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
     </inertial>
   </link>
 
@@ -108,12 +116,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.00457" />
-      <inertia ixx="0.00000324" ixy="0" ixz="0" iyy="0.00000309" iyz="0" izz="0.000000158" />
+      <inertia ixx="0.00000309" ixy="0" ixz="0" iyy="0.00000941" iyz="0" izz="0.0000125" />
     </inertial>
   </link>
   <gazebo reference="arm_right_1">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -135,12 +147,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.00355" />
-      <inertia ixx="0.00000118" ixy="0" ixz="0" iyy="0.00000107" iyz="0" izz="0.000000123" />
+      <inertia ixx="0.00000107" ixy="0" ixz="0" iyy="0.00000332" iyz="0" izz="0.00000438" />
     </inertial>
   </link>
   <gazebo reference="arm_right_2">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -149,7 +165,7 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.00457" />
-      <inertia ixx="0.00" ixy="0" ixz="0" iyy="0.00" iyz="0" izz="0.00" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
     </inertial>
   </link>
 
@@ -170,12 +186,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.00457" />
-      <inertia ixx="0.00000324" ixy="0" ixz="0" iyy="0.00000309" iyz="0" izz="0.000000158" />
+      <inertia ixx="0.00000309" ixy="0" ixz="0" iyy="0.00000941" iyz="0" izz="0.0000125" />
     </inertial>
   </link>
   <gazebo reference="arm_left_1">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -197,12 +217,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.00355" />
-      <inertia ixx="0.00000118" ixy="0" ixz="0" iyy="0.00000107" iyz="0" izz="0.000000123" />
+      <inertia ixx="0.00000107" ixy="0" ixz="0" iyy="0.00000332" iyz="0" izz="0.00000438" />
     </inertial>
   </link>
   <gazebo reference="arm_left_2">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -224,12 +248,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.00972" />
-      <inertia ixx="0.00000624" ixy="0" ixz="0" iyy="0.00000633" iyz="0" izz="0.00000464" />
+      <inertia ixx="0.00000633" ixy="0" ixz="0" iyy="0.0000165" iyz="0" izz="0.0000182" />
     </inertial>
   </link>
   <gazebo reference="stomach">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>false</selfCollide>
     <material>Gazebo/Grey</material>
   </gazebo>
@@ -251,12 +279,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.072" />
-      <inertia ixx="0.0000727" ixy="0" ixz="0" iyy="0.0000151" iyz="0" izz="0.0000876" />
+      <inertia ixx="0.0000151" ixy="0" ixz="0" iyy="0.0000879" iyz="0" izz="0.0000730" />
     </inertial>
   </link>
   <gazebo reference="hip">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -278,12 +310,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.131" />
-      <inertia ixx="0.0000442" ixy="0" ixz="0" iyy="0.0000551" iyz="0" izz="0.0000551" />
+      <inertia ixx="0.0000551" ixy="0" ixz="0" iyy="0.000121" iyz="0" izz="0.000111" />
     </inertial>
   </link>
   <gazebo reference="hip_right">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
@@ -305,12 +341,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.0599" />
-      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000127" iyz="0" izz="0.0000202" />
+      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000281" iyz="0" izz="0.0000207" />
     </inertial>
   </link>
   <gazebo reference="leg_right_1">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
@@ -332,12 +372,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.0036" />
-      <inertia ixx="0.00000145" ixy="0" ixz="0" iyy="0.000000513" iyz="0" izz="0.00000123" />
+      <inertia ixx="5.13e-7" ixy="0" ixz="0" iyy="0.00000233" iyz="0" izz="0.00000255" />
     </inertial>
   </link>
   <gazebo reference="leg_right_2">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>false</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -359,12 +403,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.131" />
-      <inertia ixx="0.0000414" ixy="0" ixz="0" iyy="0.0000523" iyz="0" izz="0.0000551" />
+      <inertia ixx="0.0000523" ixy="0" ixz="0" iyy="0.000113" iyz="0" izz="0.0000991" />
     </inertial>
   </link>
   <gazebo reference="leg_right_3">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
@@ -386,12 +434,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.131" />
-      <inertia ixx="0.0000442" ixy="0" ixz="0" iyy="0.0000551" iyz="0" izz="0.0000551" />
+      <inertia ixx="0.0000551" ixy="0" ixz="0" iyy="0.000121" iyz="0" izz="0.000111" />
     </inertial>
   </link>
   <gazebo reference="hip_left">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
@@ -413,12 +465,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.0599" />
-      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000127" iyz="0" izz="0.0000202" />
+      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000281" iyz="0" izz="0.0000207" />
     </inertial>
   </link>
   <gazebo reference="leg_left_1">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
@@ -440,12 +496,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.0036" />
-      <inertia ixx="0.00000145" ixy="0" ixz="0" iyy="0.000000513" iyz="0" izz="0.00000123" />
+      <inertia ixx="5.13e-7" ixy="0" ixz="0" iyy="0.00000233" iyz="0" izz="0.00000255" />
     </inertial>
   </link>
   <gazebo reference="leg_left_2">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>false</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -467,12 +527,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.131" />
-      <inertia ixx="0.0000414" ixy="0" ixz="0" iyy="0.0000523" iyz="0" izz="0.0000551" />
+      <inertia ixx="0.0000523" ixy="0" ixz="0" iyy="0.000113" iyz="0" izz="0.0000991" />
     </inertial>
   </link>
   <gazebo reference="leg_left_3">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Black</material>
   </gazebo>
@@ -494,12 +558,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.0209" />
-      <inertia ixx="0.00000630" ixy="0" ixz="0" iyy="0.0000141" iyz="0" izz="0.0000204" />
+      <inertia ixx="0.0000141" ixy="0" ixz="0" iyy="0.0000205" iyz="0" izz="0.00000638" />
     </inertial>
   </link>
   <gazebo reference="foot_right">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -521,12 +589,16 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.0209" />
-      <inertia ixx="0.00000630" ixy="0" ixz="0" iyy="0.0000141" iyz="0" izz="0.0000204" />
+      <inertia ixx="0.0000141" ixy="0" ixz="0" iyy="0.0000205" iyz="0" izz="0.00000638" />
     </inertial>
   </link>
   <gazebo reference="foot_left">
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.0001</minDepth>
+    <kp>10000.0</kp>
+    <kd>1.0</kd>
     <selfCollide>true</selfCollide>
     <material>Gazebo/Orange</material>
   </gazebo>
