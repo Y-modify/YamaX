@@ -27,10 +27,26 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.0120" />
-      <inertia ixx="0.00000175" ixy="0" ixz="0" iyy="0.00000245" iyz="0" izz="0.00000175" />
+      <inertia ixx="0.00000175" ixy="0" ixz="0" iyy="0.00000175" iyz="0" izz="0.00000245" />
     </inertial>
   </link>
   <gazebo reference="head">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+        <contact>
+          <bullet>
+            <kp>1000000.0</kp>
+            <kd>1.0</kd>
+          </bullet>
+        </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -60,10 +76,26 @@
     <inertial>
       <origin xyz="0 0 0" />
       <mass value="0.233" />
-      <inertia ixx="0.000220" ixy="0" ixz="0" iyy="0.000283" iyz="0" izz="0.000407" />
+      <inertia ixx="0.000407" ixy="0" ixz="0" iyy="0.000220" iyz="0" izz="0.000283" />
     </inertial>
   </link>
   <gazebo reference="body">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+        <contact>
+          <bullet>
+            <kp>1000000.0</kp>
+            <kd>1.0</kd>
+          </bullet>
+        </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -114,12 +146,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.045" />
       <mass value="0.00457" />
-      <inertia ixx="0.00000309" ixy="0" ixz="0" iyy="0.00000941" iyz="0" izz="0.0000125" />
+      <inertia ixx="0.00000324" ixy="0" ixz="0" iyy="0.00000311" iyz="0" izz="1.77e-7" />
     </inertial>
   </link>
   <gazebo reference="arm_right_1">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -145,12 +193,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.03" />
       <mass value="0.00355" />
-      <inertia ixx="0.00000107" ixy="0" ixz="0" iyy="0.00000332" iyz="0" izz="0.00000438" />
+      <inertia ixx="0.00000118" ixy="0" ixz="0" iyy="0.00000108" iyz="0" izz="1.37e-7" />
     </inertial>
   </link>
   <gazebo reference="arm_right_2">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -184,12 +248,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.045" />
       <mass value="0.00457" />
-      <inertia ixx="0.00000309" ixy="0" ixz="0" iyy="0.00000941" iyz="0" izz="0.0000125" />
+      <inertia ixx="0.00000324" ixy="0" ixz="0" iyy="0.00000311" iyz="0" izz="1.77e-7" />
     </inertial>
   </link>
   <gazebo reference="arm_left_1">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -215,12 +295,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.03" />
       <mass value="0.00355" />
-      <inertia ixx="0.00000107" ixy="0" ixz="0" iyy="0.00000332" iyz="0" izz="0.00000438" />
+      <inertia ixx="0.00000118" ixy="0" ixz="0" iyy="0.00000108" iyz="0" izz="1.37e-7" />
     </inertial>
   </link>
   <gazebo reference="arm_left_2">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -246,12 +342,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.035" />
       <mass value="0.00972" />
-      <inertia ixx="0.00000633" ixy="0" ixz="0" iyy="0.0000165" iyz="0" izz="0.0000182" />
+      <inertia ixx="0.00000624" ixy="0" ixz="0" iyy="0.00000633" iyz="0" izz="0.00000464" />
     </inertial>
   </link>
   <gazebo reference="stomach">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -277,12 +389,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.0025" />
       <mass value="0.072" />
-      <inertia ixx="0.0000151" ixy="0" ixz="0" iyy="0.0000879" iyz="0" izz="0.0000730" />
+      <inertia ixx="0.0000727" ixy="0" ixz="0" iyy="0.0000151" iyz="0" izz="0.0000876" />
     </inertial>
   </link>
   <gazebo reference="hip">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -308,12 +436,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.0255" />
       <mass value="0.131" />
-      <inertia ixx="0.0000551" ixy="0" ixz="0" iyy="0.000121" iyz="0" izz="0.000111" />
+      <inertia ixx="0.0000442" ixy="0" ixz="0" iyy="0.0000551" iyz="0" izz="0.0000551" />
     </inertial>
   </link>
   <gazebo reference="hip_right">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -339,12 +483,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.0115" />
       <mass value="0.0599" />
-      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000281" iyz="0" izz="0.0000207" />
+      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000127" iyz="0" izz="0.0000202" />
     </inertial>
   </link>
   <gazebo reference="leg_right_1">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -370,12 +530,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.0175" />
       <mass value="0.0036" />
-      <inertia ixx="5.13e-7" ixy="0" ixz="0" iyy="0.00000233" iyz="0" izz="0.00000255" />
+      <inertia ixx="0.00000145" ixy="0" ixz="0" iyy="5.13e-7" iyz="0" izz="0.00000123" />
     </inertial>
   </link>
   <gazebo reference="leg_right_2">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -401,12 +577,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.021" />
       <mass value="0.131" />
-      <inertia ixx="0.0000523" ixy="0" ixz="0" iyy="0.000113" iyz="0" izz="0.0000991" />
+      <inertia ixx="0.0000414" ixy="0" ixz="0" iyy="0.0000523" iyz="0" izz="0.0000551" />
     </inertial>
   </link>
   <gazebo reference="leg_right_3">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -432,12 +624,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.0225" />
       <mass value="0.131" />
-      <inertia ixx="0.0000551" ixy="0" ixz="0" iyy="0.000121" iyz="0" izz="0.000111" />
+      <inertia ixx="0.0000442" ixy="0" ixz="0" iyy="0.0000551" iyz="0" izz="0.0000551" />
     </inertial>
   </link>
   <gazebo reference="hip_left">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -463,12 +671,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.0115" />
       <mass value="0.0599" />
-      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000281" iyz="0" izz="0.0000207" />
+      <inertia ixx="0.0000127" ixy="0" ixz="0" iyy="0.0000127" iyz="0" izz="0.0000202" />
     </inertial>
   </link>
   <gazebo reference="leg_left_1">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -494,12 +718,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.0175" />
       <mass value="0.0036" />
-      <inertia ixx="5.13e-7" ixy="0" ixz="0" iyy="0.00000233" iyz="0" izz="0.00000255" />
+      <inertia ixx="0.00000145" ixy="0" ixz="0" iyy="5.13e-7" iyz="0" izz="0.00000123" />
     </inertial>
   </link>
   <gazebo reference="leg_left_2">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -525,12 +765,28 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.021" />
       <mass value="0.131" />
-      <inertia ixx="0.0000523" ixy="0" ixz="0" iyy="0.000113" iyz="0" izz="0.0000991" />
+      <inertia ixx="0.0000414" ixy="0" ixz="0" iyy="0.0000523" iyz="0" izz="0.0000551" />
     </inertial>
   </link>
   <gazebo reference="leg_left_3">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -543,25 +799,41 @@
 
   <link name="foot_right">
     <visual>
-      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
       <geometry>
         <box size="0.090 0.060 0.004" />
       </geometry>
       <material name="mdf" />
     </visual>
     <collision>
-      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
       <geometry>
         <box size="0.090 0.060 0.004" />
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.002" />
       <mass value="0.0209" />
-      <inertia ixx="0.0000141" ixy="0" ixz="0" iyy="0.0000205" iyz="0" izz="0.00000638" />
+      <inertia ixx="0.00000638" ixy="0" ixz="0" iyy="0.0000142" iyz="0" izz="0.0000205" />
     </inertial>
   </link>
   <gazebo reference="foot_right">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
@@ -574,29 +846,45 @@
 
   <link name="foot_left">
     <visual>
-      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
       <geometry>
         <box size="0.090 0.060 0.004" />
       </geometry>
       <material name="mdf" />
     </visual>
     <collision>
-      <origin xyz="0 0 -0.0025" rpy="0 0 0" />
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
       <geometry>
         <box size="0.090 0.060 0.004" />
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 -0.002" />
       <mass value="0.0209" />
-      <inertia ixx="0.0000141" ixy="0" ixz="0" iyy="0.0000205" iyz="0" izz="0.00000638" />
+      <inertia ixx="0.00000638" ixy="0" ixz="0" iyy="0.0000142" iyz="0" izz="0.0000205" />
     </inertial>
   </link>
   <gazebo reference="foot_left">
+    <collision>
+      <surface>
+        <friction>
+	  <bullet>
+	    <friction>0.61</friction>
+	    <friction2>0.61</friction2>
+	  </bullet>
+	</friction>
+      <contact>
+        <bullet>
+          <kp>1000000.0</kp>
+          <kd>1.0</kd>
+        </bullet>
+      </contact>
+      </surface>
+    </collision>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
     <maxVel>100.0</maxVel>
-    <minDepth>0.0</minDepth>
+    <minDepth>0.00</minDepth>
     <kp>1000000.0</kp>
     <kd>1.0</kd>
     <selfCollide>true</selfCollide>
