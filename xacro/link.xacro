@@ -4,7 +4,7 @@
   <xacro:include filename="$(find yamax_description)/xacro/config/config.xacro" ns="config" />
   <xacro:include filename="$(find yamax_description)/xacro/inertia.xacro" />
 
-  <xacro:macro name="link" params="w h d x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 name mass material gazebo_material self_collide:=true is_arm:=false has_imu:=false">
+  <xacro:macro name="link" params="w h d x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 name mass material self_collide:=true is_arm:=false has_imu:=false">
     <link name="${name}">
       <visual>
         <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
@@ -47,7 +47,7 @@
       <kp>${config.link.kp}</kp>
       <kd>${config.link.kd}</kd>
       <selfCollide>${self_collide}</selfCollide>
-      <material>${gazebo_material}</material>
+      <material>Gazebo/${material}</material>
       <xacro:if value="${has_imu}">
         <sensor name="imu_sensor" type="imu">
           <always_on>true</always_on>
