@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="lower" value="-1.5708" />
+  <xacro:property name="upper" value="1.5708" />
+
+  <xacro:property name="effort" value="10" />
+  <xacro:property name="velocity" value="10" />
+  <xacro:property name="hardware_interface" value="hardware_interface/PositionJointInterface" />
+  <xacro:property name="transmission_interface" value="transmission_interface/SimpleTransmission" />
+  <xacro:property name="transmission_suffix" value="_transmission" />
+  <xacro:property name="mechanical_reduction" value="50" />
+
+</robot>

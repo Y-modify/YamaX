@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="frame" value="map" />
+  <xacro:property name="topic" value="odom" />
+  <xacro:property name="update_rate" value="30.0" />
+
+</robot>

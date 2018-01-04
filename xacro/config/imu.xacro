@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="update_rate" value="10.0" />
+  <xacro:property name="topic" value="imu" />
+
+</robot>

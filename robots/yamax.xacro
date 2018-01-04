@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="yamax">
+
+  <xacro:include filename="$(find yamax_description)/xacro/config/config.xacro" />
+
+  <xacro:include filename="$(find yamax_description)/xacro/link.xacro" />
+  <xacro:include filename="$(find yamax_description)/xacro/joint.xacro" />
+
+  <material name="aluminium">
+    <color rgba="0.5820 0.6445 0.6484 1.0"/>
+  </material>
+  <material name="mdf">
+    <color rgba="0.8984 0.4922 0.1328 1.0"/>
+  </material>
+  <material name="motor">
+    <color rgba="0.1718 0.2421 0.3125 1.0"/>
+  </material>
+
+  <xacro:link name="head" w="0.035" h="0.035" d="0.023" mass="0.0120" material="aluminium" gazebo_material="Gazebo/Grey" />
+
+  <link name="base_link" />
+
+  <xacro:link name="body" w="0.05" h="0.11" d="0.094" mass="0.233" material="aluminium" gazebo_material="Gazebo/Grey" has_imu="true" />
+  <xacro:virtual_link name="arm_right_virtual" mass="0.00457" />
+  <xacro:link name="arm_right_1" is_arm="true" w="0.004" h="0.02" d="0.09" z="-0.045" mass="0.00457" material="mdf" gazebo_material="Gazebo/Orange" />
+  <xacro:link name="arm_right_2" is_arm="true" w="0.004" h="0.02" d="0.06" z="-0.03" mass="0.00355" material="mdf" gazebo_material="Gazebo/Orange" />
+
+  <xacro:virtual_link name="arm_left_virtual" mass="0.00457" />
+  <xacro:link name="arm_left_1" is_arm="true" w="0.004" h="0.02" d="0.09" z="-0.045" mass="0.00457" material="mdf" gazebo_material="Gazebo/Orange" />
+  <xacro:link name="arm_left_2" is_arm="true" w="0.004" h="0.02" d="0.06" z="-0.03" mass="0.00355" material="mdf" gazebo_material="Gazebo/Orange" />
+
+  <xacro:link name="stomach" w="0.054" h="0.053" d="0.070" z="-0.035" mass="0.00972" self_collide="false" material="aluminium" gazebo_material="Gazebo/Grey" />
+
+  <xacro:link name="hip" w="0.05" h="0.11" d="0.004" z="-0.0025" mass="0.072" material="mdf" gazebo_material="Gazebo/Orange" />
+
+  <xacro:link name="hip_right" w="0.055" h="0.045" d="0.045" z="-0.0225" mass="0.131" material="motor" gazebo_material="Gazebo/Black" />
+  <xacro:link name="leg_right_1" w="0.045" h="0.045" d="0.023" z="-0.0115" mass="0.0599" material="motor" gazebo_material="Gazebo/Black" />
+  <xacro:link name="leg_right_2" w="0.022" h="0.060" d="0.035" z="-0.0175" mass="0.0036" self_collide="false" material="mdf" gazebo_material="Gazebo/Orange" />
+  <xacro:link name="leg_right_3" w="0.055" h="0.045" d="0.042" z="-0.021" mass="0.131" material="motor" gazebo_material="Gazebo/Black" />
+
+  <xacro:link name="hip_left" w="0.055" h="0.045" d="0.045" z="-0.0225" mass="0.131" material="motor" gazebo_material="Gazebo/Black" />
+  <xacro:link name="leg_left_1" w="0.045" h="0.045" d="0.023" z="-0.0115" mass="0.0599" material="motor" gazebo_material="Gazebo/Black" />
+  <xacro:link name="leg_left_2" w="0.022" h="0.060" d="0.035" z="-0.0175" mass="0.0036" self_collide="false" material="mdf" gazebo_material="Gazebo/Orange" />
+  <xacro:link name="leg_left_3" w="0.055" h="0.045" d="0.042" z="-0.021" mass="0.131" material="motor" gazebo_material="Gazebo/Black" />
+
+  <xacro:link name="foot_right" w="0.090" h="0.060" d="0.004" z="-0.002" mass="0.0209" material="mdf" gazebo_material="Gazebo/Orange" />
+  <xacro:link name="foot_left" w="0.090" h="0.060" d="0.004" z="-0.002" mass="0.0209" material="mdf" gazebo_material="Gazebo/Orange" />
+
+  <xacro:joint name="neck" aname="A" parent="body" child="head" x="-0.004" z="0.070" axis="z" />
+
+  <joint name="dummy_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="body"/>
+  </joint>
+
+  <xacro:joint name="shoulder_right_x" aname="E" parent="body" child="arm_right_virtual" x="0.025" y="-0.075" z="0.040" axis="y" />
+  <xacro:joint name="shoulder_right_z" aname="F" parent="arm_right_virtual" child="arm_right_1" axis="x" />
+
+  <xacro:joint name="shoulder_left_x" aname="B" parent="body" child="arm_left_virtual" x="0.025" y="0.075" z="0.040" axis="y" />
+  <xacro:joint name="shoulder_left_z" aname="C" parent="arm_left_virtual" child="arm_left_1" axis="x" />
+
+  <xacro:joint name="elbow_right" aname="G" parent="arm_right_1" child="arm_right_2" x="-0.010" y="-0.020" z="-0.080" yaw="-1.5708" axis="x" />
+  <xacro:joint name="elbow_left" aname="D" parent="arm_left_1" child="arm_left_2" x="-0.010" y="0.020" z="-0.080" yaw="-1.5708" axis="x" />
+
+  <xacro:joint name="backbone_1" aname="H" parent="body" child="stomach" x="0.004" z="-0.020" axis="x" />
+  <xacro:joint name="backbone_2" aname="I" parent="stomach" child="hip" z="-0.065" axis="y" />
+
+  <xacro:joint name="hip_joint_right_z" aname="K" parent="hip" child="hip_right" y="-0.035" z="-0.017" axis="x" />
+  <xacro:joint name="hip_joint_right_x" aname="L" parent="hip_right" child="leg_right_1" x="0.010" z="-0.050" axis="y" />
+  <xacro:joint name="hip_joint_left_z" aname="Q" parent="hip" child="hip_left" y="0.035" z="-0.017" axis="x" />
+  <xacro:joint name="hip_joint_left_x" aname="R" parent="hip_left" child="leg_left_1" x="0.010" z="-0.050" axis="y" />
+
+  <xacro:joint name="knee_right" aname="M" parent="leg_right_1" child="leg_right_2" x="-0.010" z="-0.010" axis="y" />
+  <xacro:joint name="knee_left" aname="S" parent="leg_left_1" child="leg_left_2" x="-0.010" z="-0.010" axis="y" />
+
+  <xacro:joint name="ankle_1_right" aname="N" parent="leg_right_2" child="leg_right_3" z="-0.020" axis="y" />
+  <xacro:joint name="ankle_1_left" aname="T" parent="leg_left_2" child="leg_left_3" z="-0.020" axis="y" />
+
+  <xacro:joint name="ankle_2_right" aname="O" parent="leg_right_3" child="foot_right" x="0.01" z="-0.055" axis="x" />
+  <xacro:joint name="ankle_2_left" aname="U" parent="leg_left_3" child="foot_left" x="0.01" z="-0.055" axis="x" />
+
+  <gazebo>
+    <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+      <robotNamespace>${config.namespace}</robotNamespace>
+      <frameName>${config.odom.frame}</frameName>
+      <bodyName>${config.body}</bodyName>
+      <topicName>${config.odom.topic}</topicName>
+      <updateRate>${config.odom.update_rate}</updateRate>
+    </plugin>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>${config.namespace}</robotNamespace>
+      <robotSimType>${config.sim_type}</robotSimType>
+    </plugin>
+  </gazebo>
+</robot>

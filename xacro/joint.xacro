@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find yamax_description)/xacro/config/joint.xacro" ns="joint" />
+
+  <xacro:macro name="joint" params="x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 axis name aname parent child">
+    <joint name="${name}" type="revolute">
+      <parent link="${parent}"/>
+      <child link="${child}"/>
+
+      <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
+      <xacro:if value="${axis == 'x'}">
+        <axis xyz="1 0 0" />
+      </xacro:if>
+      <xacro:if value="${axis == 'y'}">
+        <axis xyz="0 1 0" />
+      </xacro:if>
+      <xacro:if value="${axis == 'z'}">
+        <axis xyz="0 0 1" />
+      </xacro:if>
+      <limit lower="${joint.lower}" upper="${joint.upper}" effort="${joint.effort}" velocity="${joint.velocity}" />
+    </joint>
+    <transmission name="${name}${joint.transmission_suffix}">
+      <type>${joint.transmission_interface}</type>
+      <joint name="${name}">
+        <hardwareInterface>${joint.hardware_interface}</hardwareInterface>
+      </joint>
+      <actuator name="${aname}">
+        <mechanicalReduction>${joint.mechanical_reduction}</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+
+</robot>

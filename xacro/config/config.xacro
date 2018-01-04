@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="namespace" value="/yamax" />
+  <xacro:property name="sim_type" value="gazebo_ros_control/DefaultRobotHWSim" />
+  <xacro:property name="body" value="body" />
+
+  <xacro:include filename="$(find yamax_description)/xacro/config/joint.xacro" ns="joint" />
+  <xacro:include filename="$(find yamax_description)/xacro/config/link.xacro" ns="link" />
+  <xacro:include filename="$(find yamax_description)/xacro/config/imu.xacro" ns="imu" />
+  <xacro:include filename="$(find yamax_description)/xacro/config/odom.xacro" ns="odom" />
+
+</robot>

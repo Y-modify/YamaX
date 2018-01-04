@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="friction1" value="0.61" />
+  <xacro:property name="friction2" value="0.61" />
+  <xacro:property name="kp" value="1000000.0" />
+  <xacro:property name="kd" value="1.0" />
+  
+</robot>

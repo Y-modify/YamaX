@@ -1,8 +1,8 @@
 <launch>
-    <arg name="model" default="$(find yamax_description)/robots/yamax.urdf" />
+    <arg name="model" default="$(find yamax_description)/robots/yamax.xacro" />
     <arg name="rviz_config" default="$(find urdf_tutorial)/rviz/urdf.rviz" />
     <arg name="gui" default="False" />
-    <param name="robot_description" textfile="$(arg model)" />
+    <param name="robot_description" command="xacro '$(arg model)' --inorder --xacro-ns" />
     <param name="use_gui" value="$(arg gui)"/>
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />

@@ -10,6 +10,7 @@
   <url type="website">https://github.com/Y-modify/yamax</url>
 
   <author email="me@coord-e.com">coord.e</author>
+  <exec_depend>xacro</exec_depend>
   <buildtool_depend>catkin</buildtool_depend>
 
 </package>

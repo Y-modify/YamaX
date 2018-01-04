@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  
+  <xacro:macro name="inertia" params="w h d mass is_arm:=false">
+    <xacro:if value="${is_arm}">
+    	<inertia ixx="${1 / 12 * mass * (h * h + d * d)}" ixy="0" ixz="0"
+    			 iyy="${1 / 12 * mass * (w * w + d * d) + mass * (w / 2) * (w / 2)}" iyz="0"
+    			 izz="${1 / 12 * mass * (h * h + w * w) + mass * (w / 2) * (w / 2)}" />
+    </xacro:if>
+    <xacro:unless value="${is_arm}">
+    	<inertia ixx="${1 / 12 * mass * (h * h + d * d)}" ixy="0" ixz="0"
+    			 iyy="${1 / 12 * mass * (w * w + d * d)}" iyz="0"
+    			 izz="${1 / 12 * mass * (h * h + w * w)}" />
+    </xacro:unless>
+  </xacro:macro>
+
+</robot>

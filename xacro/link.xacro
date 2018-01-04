@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find yamax_description)/xacro/config/config.xacro" ns="config" />
+  <xacro:include filename="$(find yamax_description)/xacro/inertia.xacro" />
+
+  <xacro:macro name="link" params="w h d x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 name mass material gazebo_material self_collide:=true is_arm:=false has_imu:=false">
+    <link name="${name}">
+      <visual>
+        <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
+        <geometry>
+          <box size="${w} ${h} ${d}" />
+        </geometry>
+        <material name="${material}" />
+      </visual>
+      <collision>
+        <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
+        <geometry>
+          <box size="${w} ${h} ${d}" />
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="${x} ${y} ${z}" />
+        <mass value="${mass}" />
+        <xacro:inertia w="${w}" h="${h}" d="${d}" mass="${mass}" is_arm="${is_arm}" />
+      </inertial>
+    </link>
+    <gazebo reference="${name}">
+      <collision>
+        <surface>
+          <friction>
+            <bullet>
+              <friction>${config.link.friction1}</friction>
+              <friction2>${config.link.friction2}</friction2>
+            </bullet>
+          </friction>
+          <contact>
+            <bullet>
+              <kp>${config.link.kp}</kp>
+              <kd>${config.link.kd}</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+      <mu1>${config.link.friction1}</mu1>
+      <mu2>${config.link.friction2}</mu2>
+      <kp>${config.link.kp}</kp>
+      <kd>${config.link.kd}</kd>
+      <selfCollide>${self_collide}</selfCollide>
+      <material>${gazebo_material}</material>
+      <xacro:if value="${has_imu}">
+        <sensor name="imu_sensor" type="imu">
+          <always_on>true</always_on>
+          <update_rate>${config.imu.update_rate * 10}</update_rate>
+          <visualize>true</visualize>
+          <topic>${config.imu.topic}</topic>
+          <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+            <robotNamespace>${config.namespace}</robotNamespace>
+            <topicName>${config.imu.topic}</topicName>
+            <bodyName>${config.body}</bodyName>
+            <updateRateHZ>${config.imu.update_rate}</updateRateHZ>
+            <gaussianNoise>0.0</gaussianNoise>
+            <xyzOffset>0 0 0</xyzOffset>
+            <rpyOffset>0 0 0</rpyOffset>
+            <frameName>${config.body}</frameName>
+          </plugin>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+      </xacro:if>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="virtual_link" params="w:=0 h:=0 d:=0 x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 name mass is_arm:=false">
+    <link name="${name}">
+      <inertial>
+        <origin xyz="${x} ${y} ${z}" />
+        <mass value="${mass}" />
+        <xacro:inertia w="${w}" h="${h}" d="${d}" mass="${mass}" is_arm="${is_arm}" />
+      </inertial>
+    </link>
+  </xacro:macro>
+
+</robot>
