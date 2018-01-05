@@ -3,7 +3,11 @@
 
   <xacro:property name="friction1" value="0.61" />
   <xacro:property name="friction2" value="0.61" />
-  <xacro:property name="kp" value="1000000.0" />
-  <xacro:property name="kd" value="1.0" />
-  
+  <xacro:property name="kp" value="100000000000.0" />
+  <xacro:property name="kd" value="1000000000.0" />
+  <xacro:property name="soft_erp" value="0.8" />
+  <xacro:property name="soft_cfm" value="0.2" />
+  <xacro:property name="max_vel" value="0.001" />
+  <xacro:property name="min_depth" value="0.00001" />
+
 </robot>

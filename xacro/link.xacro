@@ -29,13 +29,27 @@
       <collision>
         <surface>
           <friction>
+            <ode>
+              <mu>${config.link.friction1}</mu>
+              <mu2>${config.link.friction2}</mu2>
+            </ode>
             <bullet>
               <friction>${config.link.friction1}</friction>
               <friction2>${config.link.friction2}</friction2>
             </bullet>
           </friction>
           <contact>
+            <ode>
+              <soft_cfm>${config.link.soft_cfm}</soft_cfm>
+              <soft_erp>${config.link.soft_erp}</soft_erp>
+              <kp>${config.link.kp}</kp>
+              <kd>${config.link.kd}</kd>
+              <max_vel>${config.link.max_vel}</max_vel>
+              <min_depth>${config.link.min_depth}</min_depth>
+            </ode>
             <bullet>
+              <soft_cfm>${config.link.soft_cfm}</soft_cfm>
+              <soft_erp>${config.link.soft_erp}</soft_erp>
               <kp>${config.link.kp}</kp>
               <kd>${config.link.kd}</kd>
             </bullet>
