@@ -13,12 +13,14 @@
         </geometry>
         <material name="${material}" />
       </visual>
+      <xacro:if value="${self_collide == 'true'}">
       <collision>
         <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
         <geometry>
           <box size="${w} ${h} ${d}" />
         </geometry>
       </collision>
+      </xacro:if>
       <inertial>
         <origin xyz="${x} ${y} ${z}" />
         <mass value="${mass}" />
