@@ -42,8 +42,8 @@
           </friction>
           <contact>
             <ode>
-              <kp>${config.link.kp}</kp>
-              <kd>${config.link.kd}</kd>
+              <!--<kp>${config.link.kp}</kp>
+              <kd>${config.link.kd}</kd>-->
               <max_vel>${config.link.max_vel}</max_vel>
               <min_depth>${config.link.min_depth}</min_depth>
             </ode>
@@ -54,10 +54,10 @@
           </contact>
         </surface>
       </collision>
-      <mu1>${config.link.friction1}</mu1>
+      <!--<mu1>${config.link.friction1}</mu1>
       <mu2>${config.link.friction2}</mu2>
       <kp>${config.link.kp}</kp>
-      <kd>${config.link.kd}</kd>
+      <kd>${config.link.kd}</kd>-->
       <selfCollide>${self_collide}</selfCollide>
       <material>Gazebo/${material}</material>
       <xacro:if value="${has_imu}">
