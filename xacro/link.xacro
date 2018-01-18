@@ -4,7 +4,7 @@
   <xacro:include filename="$(find yamax_description)/xacro/config/config.xacro" ns="config" />
   <xacro:include filename="$(find yamax_description)/xacro/inertia.xacro" />
 
-  <xacro:macro name="link" params="w h d x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 name mass material self_collide:=true is_arm:=false has_imu:=false">
+  <xacro:macro name="link" params="w h d x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 name mass material self_collide:=false is_arm:=false has_imu:=false">
     <link name="${name}">
       <visual>
         <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
@@ -13,14 +13,12 @@
         </geometry>
         <material name="${material}" />
       </visual>
-      <xacro:if value="${self_collide == 'true'}">
       <collision>
         <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
         <geometry>
           <box size="${w} ${h} ${d}" />
         </geometry>
       </collision>
-      </xacro:if>
       <inertial>
         <origin xyz="${x} ${y} ${z}" />
         <mass value="${mass}" />
@@ -58,7 +56,7 @@
       <mu2>${config.link.friction2}</mu2>
       <kp>${config.link.kp}</kp>
       <kd>${config.link.kd}</kd>-->
-      <selfCollide>${self_collide}</selfCollide>
+      <self_collide>${self_collide}</self_collide>
       <material>Gazebo/${material}</material>
       <xacro:if value="${has_imu}">
         <sensor name="imu_sensor" type="imu">
