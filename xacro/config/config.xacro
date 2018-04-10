@@ -5,9 +5,9 @@
   <xacro:property name="sim_type" value="gazebo_ros_control/DefaultRobotHWSim" />
   <xacro:property name="body" value="body" />
 
-  <xacro:include filename="$(find yamax_description)/xacro/config/joint.xacro" ns="joint" />
-  <xacro:include filename="$(find yamax_description)/xacro/config/link.xacro" ns="link" />
-  <xacro:include filename="$(find yamax_description)/xacro/config/imu.xacro" ns="imu" />
-  <xacro:include filename="$(find yamax_description)/xacro/config/odom.xacro" ns="odom" />
+  <xacro:include filename="$(cwd)/xacro/config/joint.xacro" ns="joint" />
+  <xacro:include filename="$(cwd)/xacro/config/link.xacro" ns="link" />
+  <xacro:include filename="$(cwd)/xacro/config/imu.xacro" ns="imu" />
+  <xacro:include filename="$(cwd)/xacro/config/odom.xacro" ns="odom" />
 
 </robot>

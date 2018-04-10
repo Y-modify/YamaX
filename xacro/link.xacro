@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find yamax_description)/xacro/config/config.xacro" ns="config" />
-  <xacro:include filename="$(find yamax_description)/xacro/inertia.xacro" />
+  <xacro:include filename="$(cwd)/xacro/config/config.xacro" ns="config" />
+  <xacro:include filename="$(cwd)/xacro/inertia.xacro" />
 
   <xacro:macro name="link" params="w h d x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 name mass material self_collide:=false is_arm:=false has_imu:=false">
     <link name="${name}">

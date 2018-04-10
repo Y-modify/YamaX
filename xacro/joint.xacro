@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find yamax_description)/xacro/config/joint.xacro" ns="joint" />
+  <xacro:include filename="$(cwd)/xacro/config/joint.xacro" ns="joint" />
 
   <xacro:macro name="joint" params="x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 axis name aname parent child">
     <joint name="${name}" type="revolute">

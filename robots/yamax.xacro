@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="yamax">
 
-  <xacro:include filename="$(find yamax_description)/xacro/config/config.xacro" ns="config" />
+  <xacro:include filename="$(cwd)/xacro/config/config.xacro" ns="config" />
 
-  <xacro:include filename="$(find yamax_description)/xacro/link.xacro" />
-  <xacro:include filename="$(find yamax_description)/xacro/joint.xacro" />
+  <xacro:include filename="$(cwd)/xacro/link.xacro" />
+  <xacro:include filename="$(cwd)/xacro/joint.xacro" />
 
-  <xacro:include filename="$(find yamax_description)/xacro/material.xacro" />
+  <xacro:include filename="$(cwd)/xacro/material.xacro" />
 
   <xacro:link name="head" w="0.035" h="0.035" d="0.023" mass="0.0120" material="Grey" />
 
