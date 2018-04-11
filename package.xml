@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>yamax_description</name>
-  <version>0.0.1</version>
-  <description>The yamax_description package</description>
+  <name>YamaX</name>
+  <version>4.0</version>
+  <description>A humanoid made for our research about the automation of walk</description>
 
   <maintainer email="me@coord-e.com">coord.e</maintainer>
   <license>MIT</license>
 
-  <url type="website">https://github.com/Y-modify/yamax</url>
+  <url type="website">https://github.com/Y-modify/YamaX</url>
 
   <author email="me@coord-e.com">coord.e</author>
   <exec_depend>xacro</exec_depend>
