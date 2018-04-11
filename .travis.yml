@@ -3,9 +3,9 @@ sudo: true
 dist: trusty
 script:
   - |
-    git clone https://github.com/ros/xacro --depth 1
-    export PYTHONPATH=\$PYTHONPATH:$(pwd)/xacro/src
-    python3 xacro/xacro.py --inorder --xacro-ns robots/yamax.xacro > yamax.urdf
+    git clone https://github.com/ros/xacro --depth 1 xacro-src
+    export PYTHONPATH=\$PYTHONPATH:$(pwd)/xacro-src/src
+    python3 xacro-src/xacro.py --inorder --xacro-ns robots/yamax.xacro > yamax.urdf
 deploy:
   provider: releases
   api_key: $GITHUB_OAUTH_TOKEN
