@@ -5,11 +5,11 @@ script:
   - |
     git clone https://github.com/ros/xacro --depth 1 xacro-src
     export PYTHONPATH=\$PYTHONPATH:$(pwd)/xacro-src/src
-    python3 xacro-src/xacro.py --inorder --xacro-ns robots/yamax.xacro > yamax.urdf
+    python3 xacro-src/xacro.py --inorder --xacro-ns robots/yamax.xacro > YamaX_${TRAVIS_TAG}.urdf
 deploy:
   provider: releases
   api_key: $GITHUB_OAUTH_TOKEN
-  file: "yamax.urdf"
+  file: "YamaX_${TRAVIS_TAG}.urdf"
   skip_cleanup: true
   on:
     tags: true
