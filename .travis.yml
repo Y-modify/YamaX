@@ -1,0 +1,15 @@
+language: python
+sudo: true
+dist: trusty
+script:
+  - |
+    git clone https://github.com/ros/xacro --depth 1
+    export PYTHONPATH=\$PYTHONPATH:$(pwd)/xacro/src
+    python3 xacro/xacro.py --inorder --xacro-ns robots/yamax.xacro > yamax.urdf
+deploy:
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  file: "yamax.urdf"
+  skip_cleanup: true
+  on:
+    tags: true
