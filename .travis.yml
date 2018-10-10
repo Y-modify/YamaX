@@ -12,7 +12,9 @@ script:
 deploy:
   provider: releases
   api_key: $GITHUB_OAUTH_TOKEN
-  file: "YamaX_${TRAVIS_TAG}.urdf"
+  file:
+    - "YamaX_${TRAVIS_TAG}.urdf"
+    - "YamaX_${TRAVIS_TAG}.sdf"
   skip_cleanup: true
   on:
     tags: true
