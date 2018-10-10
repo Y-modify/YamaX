@@ -1,15 +1,20 @@
 language: python
 sudo: true
+services:
+  - docker
 dist: trusty
 script:
   - |
     git clone https://github.com/ros/xacro --depth 1 xacro-src
     export PYTHONPATH=\$PYTHONPATH:$(pwd)/xacro-src/src
     python3 xacro-src/xacro.py --inorder --xacro-ns robots/yamax.xacro > YamaX_${TRAVIS_TAG}.urdf
+  - docker run -v $(pwd):/urdf gazebo gz sdf -p /urdf/YamaX_${TRAVIS_TAG}.urdf > YamaX_${TRAVIS_TAG}.sdf
 deploy:
   provider: releases
   api_key: $GITHUB_OAUTH_TOKEN
-  file: "YamaX_${TRAVIS_TAG}.urdf"
+  file:
+    - "YamaX_${TRAVIS_TAG}.urdf"
+    - "YamaX_${TRAVIS_TAG}.sdf"
   skip_cleanup: true
   on:
     tags: true
