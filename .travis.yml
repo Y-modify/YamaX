@@ -1,5 +1,7 @@
 language: python
 sudo: true
+services:
+  - docker
 dist: trusty
 script:
   - |
