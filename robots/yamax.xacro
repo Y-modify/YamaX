@@ -13,13 +13,6 @@
   <link name="base_link" />
 
   <xacro:link name="body" w="0.05" h="0.11" d="0.10" mass="0.233" material="Grey" has_imu="true" />
-  <xacro:virtual_link name="arm_right_virtual" mass="0.00457" />
-  <xacro:link name="arm_right_1" is_arm="true" w="0.004" h="0.02" d="0.09" z="-0.045" mass="0.00457" material="Orange" />
-  <xacro:link name="arm_right_2" is_arm="true" w="0.004" h="0.02" d="0.06" z="-0.03" mass="0.00355" material="Orange" />
-
-  <xacro:virtual_link name="arm_left_virtual" mass="0.00457" />
-  <xacro:link name="arm_left_1" is_arm="true" w="0.004" h="0.02" d="0.09" z="-0.045" mass="0.00457" material="Orange" />
-  <xacro:link name="arm_left_2" is_arm="true" w="0.004" h="0.02" d="0.06" z="-0.03" mass="0.00355" material="Orange" />
 
   <xacro:link name="stomach" w="0.054" h="0.053" d="0.070" z="-0.035" mass="0.00972" material="Grey" />
 
@@ -44,15 +37,6 @@
     <parent link="base_link"/>
     <child link="body"/>
   </joint>
-
-  <xacro:joint name="shoulder_right_x" aname="E" parent="body" child="arm_right_virtual" x="0.025" y="-0.075" z="0.040" axis="y" />
-  <xacro:joint name="shoulder_right_z" aname="F" parent="arm_right_virtual" child="arm_right_1" axis="x" />
-
-  <xacro:joint name="shoulder_left_x" aname="B" parent="body" child="arm_left_virtual" x="0.025" y="0.075" z="0.040" axis="y" />
-  <xacro:joint name="shoulder_left_z" aname="C" parent="arm_left_virtual" child="arm_left_1" axis="x" />
-
-  <xacro:joint name="elbow_right" aname="G" parent="arm_right_1" child="arm_right_2" x="-0.010" y="-0.020" z="-0.080" yaw="-1.5708" axis="x" />
-  <xacro:joint name="elbow_left" aname="D" parent="arm_left_1" child="arm_left_2" x="-0.010" y="0.020" z="-0.080" yaw="-1.5708" axis="x" />
 
   <xacro:joint name="backbone_1" aname="H" parent="body" child="stomach" x="0.004" z="-0.020" axis="x" />
   <xacro:joint name="backbone_2" aname="I" parent="stomach" child="hip" z="-0.065" axis="y" />
