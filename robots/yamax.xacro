@@ -12,7 +12,7 @@
 
   <link name="base_link" />
 
-  <xacro:link name="body" w="0.05" h="0.11" d="0.094" mass="0.233" material="Grey" has_imu="true" />
+  <xacro:link name="body" w="0.05" h="0.11" d="0.10" mass="0.233" material="Grey" has_imu="true" />
   <xacro:virtual_link name="arm_right_virtual" mass="0.00457" />
   <xacro:link name="arm_right_1" is_arm="true" w="0.004" h="0.02" d="0.09" z="-0.045" mass="0.00457" material="Orange" />
   <xacro:link name="arm_right_2" is_arm="true" w="0.004" h="0.02" d="0.06" z="-0.03" mass="0.00355" material="Orange" />
