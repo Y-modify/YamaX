@@ -8,52 +8,43 @@
 
   <xacro:include filename="$(cwd)/xacro/material.xacro" />
 
-  <xacro:link name="head" w="0.035" h="0.035" d="0.023" mass="0.0120" material="Grey" />
-
   <link name="base_link" />
 
-  <xacro:link name="body" w="0.05" h="0.11" d="0.10" mass="0.233" material="Grey" has_imu="true" />
+  <xacro:link name="hip" w="0.100" h="0.160" d="0.004" mass="0.207" x="0" y="0" z="0" material="Orange" has_imu="true" />
+  <xacro:link name="board" w="0.085" h="0.115" d="0.065" mass="0.220" x="0" y="0" z="0.0325" material="Black" />
+  <xacro:joint name="ignore_board" aname="board" parent="hip" child="board" z="0.004" axis="x" />
 
-  <xacro:link name="stomach" w="0.054" h="0.053" d="0.070" z="-0.035" mass="0.00972" material="Grey" />
+  <xacro:joint name="ignore_hip_right" aname="ignore_hip_right" parent="hip" child="hip_right" y="-0.051" z="-0.004" axis="x" />
+  <xacro:link name="hip_right" w="0.0325" h="0.032" d="0.043" y="0" z="-0.0215" mass="0.0552" material="Black" />
+  <xacro:joint name="hip_joint_right_r" aname="K" parent="hip_right" child="virtual_hip_right" z="-0.030" axis="x" />
+  <xacro:virtual_link name="virtual_hip_right" w="0.01" h="0.01" d="0.01" z="-0.020" mass="0.0113" />
+  <xacro:joint name="hip_joint_right_p" aname="L" parent="virtual_hip_right" child="leg_right_1" z="-0.040" axis="y" />
+  <xacro:link name="leg_right_1" w="0.0325" h="0.032" d="0.043" z="-0.013" mass="0.0742" material="Black" />
+  <xacro:joint name="knee_right" aname="M" parent="leg_right_1" child="leg_right_2" z="-0.051" axis="y" />
+  <xacro:link name="leg_right_2" w="0.0325" h="0.032" d="0.043" z="-0.013" mass="0.0742" material="Black" />
+  <xacro:joint name="ankle_right_p" aname="N" parent="leg_right_2" child="leg_right_3" z="-0.051" axis="y" />
+  <xacro:link name="leg_right_3" w="0.0325" h="0.032" d="0.086" z="-0.034" mass="0.135" material="Black" />
+  <xacro:joint name="ankle_right_r" aname="O" parent="leg_right_3" child="foot_right" z="-0.065" axis="x" />
+  <xacro:link name="foot_right" w="0.094" h="0.064" d="0.013" z="-0.0275" mass="0.102" material="Orange" />
 
-  <xacro:link name="hip" w="0.05" h="0.11" d="0.004" z="-0.0025" mass="0.072" material="Orange" />
+  <xacro:joint name="ignore_hip_left" aname="ignore_hip_left" parent="hip" child="hip_left" y="0.051" z="-0.004" axis="x" />
+  <xacro:link name="hip_left" w="0.0325" h="0.032" d="0.043" y="0" z="-0.0215" mass="0.0552" material="Black" />
+  <xacro:joint name="hip_joint_left_r" aname="Q" parent="hip_left" child="virtual_hip_left" z="-0.030" axis="x" />
+  <xacro:virtual_link name="virtual_hip_left" w="0.01" h="0.01" d="0.01" z="-0.020" mass="0.0113" />
+  <xacro:joint name="hip_joint_left_p" aname="R" parent="virtual_hip_left" child="leg_left_1" z="-0.040" axis="y" />
+  <xacro:link name="leg_left_1" w="0.0325" h="0.032" d="0.043" z="-0.013" mass="0.0742" material="Black" />
+  <xacro:joint name="knee_left" aname="S" parent="leg_left_1" child="leg_left_2" z="-0.051" axis="y" />
+  <xacro:link name="leg_left_2" w="0.0325" h="0.032" d="0.043" z="-0.013" mass="0.0742" material="Black" />
+  <xacro:joint name="ankle_left_p" aname="T" parent="leg_left_2" child="leg_left_3" z="-0.051" axis="y" />
+  <xacro:link name="leg_left_3" w="0.0325" h="0.032" d="0.086" z="-0.034" mass="0.135" material="Black" />
+  <xacro:joint name="ankle_left_r" aname="U" parent="leg_left_3" child="foot_left" z="-0.065" axis="x" />
+  <xacro:link name="foot_left" w="0.094" h="0.064" d="0.013" z="-0.0275" mass="0.102" material="Orange" />
 
-  <xacro:link name="hip_right" w="0.055" h="0.045" d="0.045" z="-0.0225" mass="0.131" material="Black" />
-  <xacro:link name="leg_right_1" w="0.045" h="0.045" d="0.023" z="-0.0115" mass="0.0599" material="Black" />
-  <xacro:link name="leg_right_2" w="0.022" h="0.060" d="0.035" z="-0.0175" mass="0.0036" material="Orange" />
-  <xacro:link name="leg_right_3" w="0.055" h="0.045" d="0.042" z="-0.021" mass="0.131" material="Black" />
-
-  <xacro:link name="hip_left" w="0.055" h="0.045" d="0.045" z="-0.0225" mass="0.131" material="Black" />
-  <xacro:link name="leg_left_1" w="0.045" h="0.045" d="0.023" z="-0.0115" mass="0.0599" material="Black" />
-  <xacro:link name="leg_left_2" w="0.022" h="0.060" d="0.035" z="-0.0175" mass="0.0036" material="Orange" />
-  <xacro:link name="leg_left_3" w="0.055" h="0.045" d="0.042" z="-0.021" mass="0.131" material="Black" />
-
-  <xacro:link name="foot_right" w="0.090" h="0.060" d="0.004" z="-0.002" mass="0.0209" material="Orange" />
-  <xacro:link name="foot_left" w="0.090" h="0.060" d="0.004" z="-0.002" mass="0.0209" material="Orange" />
-
-  <xacro:joint name="neck" aname="A" parent="body" child="head" x="-0.004" z="0.070" axis="z" />
 
   <joint name="dummy_joint" type="fixed">
     <parent link="base_link"/>
-    <child link="body"/>
+    <child link="hip"/>
   </joint>
-
-  <xacro:joint name="backbone_1" aname="H" parent="body" child="stomach" x="0.004" z="-0.020" axis="x" />
-  <xacro:joint name="backbone_2" aname="I" parent="stomach" child="hip" z="-0.065" axis="y" />
-
-  <xacro:joint name="hip_joint_right_z" aname="K" parent="hip" child="hip_right" y="-0.035" z="-0.017" axis="x" />
-  <xacro:joint name="hip_joint_right_x" aname="L" parent="hip_right" child="leg_right_1" x="0.010" z="-0.050" axis="y" />
-  <xacro:joint name="hip_joint_left_z" aname="Q" parent="hip" child="hip_left" y="0.035" z="-0.017" axis="x" />
-  <xacro:joint name="hip_joint_left_x" aname="R" parent="hip_left" child="leg_left_1" x="0.010" z="-0.050" axis="y" />
-
-  <xacro:joint name="knee_right" aname="M" parent="leg_right_1" child="leg_right_2" x="-0.010" z="-0.010" axis="y" />
-  <xacro:joint name="knee_left" aname="S" parent="leg_left_1" child="leg_left_2" x="-0.010" z="-0.010" axis="y" />
-
-  <xacro:joint name="ankle_1_right" aname="N" parent="leg_right_2" child="leg_right_3" z="-0.020" axis="y" />
-  <xacro:joint name="ankle_1_left" aname="T" parent="leg_left_2" child="leg_left_3" z="-0.020" axis="y" />
-
-  <xacro:joint name="ankle_2_right" aname="O" parent="leg_right_3" child="foot_right" x="0.01" z="-0.055" axis="x" />
-  <xacro:joint name="ankle_2_left" aname="U" parent="leg_left_3" child="foot_left" x="0.01" z="-0.055" axis="x" />
 
   <gazebo>
     <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
