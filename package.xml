@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>YamaX</name>
-  <version>4.0</version>
+  <version>6.0</version>
   <description>A humanoid made for our research about the automation of walk</description>
 
   <maintainer email="me@coord-e.com">coord.e</maintainer>
