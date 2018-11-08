@@ -9,7 +9,7 @@
 
   <!-- 13.0kgf・cm -->
   <!-- 0.16s/60°   -->
-  <xacro:property name="effort" value="13.0" />
+  <xacro:property name="effort" value="${13.0 / 0.09807}" />
   <xacro:property name="velocity" value="${pi / 3 / 0.16}" />
 
   <xacro:property name="hardware_interface" value="hardware_interface/PositionJointInterface" />
