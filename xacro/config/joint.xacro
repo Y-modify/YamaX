@@ -4,8 +4,11 @@
   <xacro:property name="lower" value="${-pi / 2}" />
   <xacro:property name="upper" value="${ pi / 2}" />
 
-  <xacro:property name="effort" value="3" />
-  <xacro:property name="velocity" value="1.17" />
+  <!-- https://kondo-robot.com/product/krs-4031hv-ics -->
+  <!-- 13.0kgf・cm -->
+  <!-- 0.16s/60°   -->
+  <xacro:property name="effort" value="13.0" />
+  <xacro:property name="velocity" value="${pi / 3 / 0.16}" />
   <xacro:property name="hardware_interface" value="hardware_interface/PositionJointInterface" />
   <xacro:property name="transmission_interface" value="transmission_interface/SimpleTransmission" />
   <xacro:property name="transmission_suffix" value="_transmission" />
