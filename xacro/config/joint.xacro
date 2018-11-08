@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:property name="lower" value="-1.5708" />
-  <xacro:property name="upper" value="1.5708" />
+  <xacro:property name="lower" value="${-pi / 2}" />
+  <xacro:property name="upper" value="${ pi / 2}" />
 
   <xacro:property name="effort" value="3" />
   <xacro:property name="velocity" value="1.17" />
