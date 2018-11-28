@@ -31,4 +31,12 @@
     </transmission>
   </xacro:macro>
 
+  <xacro:macro name="fixed_joint" params="x:=0 y:=0 z:=0 roll:=0 pitch:=0 yaw:=0 name parent child">
+    <joint name="ignore_${name}" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${child}"/>
+
+      <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
+    </joint>
+  </xacro:macro>
 </robot>
