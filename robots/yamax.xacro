@@ -12,14 +12,10 @@
   <xacro:link name="board" w="0.085" h="0.115" d="0.065" mass="0.220" x="0" y="0" z="0.0325" material="Black" />
   <xacro:fixed_joint name="board" parent="base_link" child="board" z="0.004" />
 
-<<<<<<< HEAD
-  <xacro:fixed_joint name="hip_right" parent="base_link" child="hip_right" y="-0.051" z="-0.004" />
-=======
   <!-- hip_joint_*_p, knee_*, ankle_*_p joints are line symmetry -->
   <!-- other joints are point symmetry                           -->
 
-  <xacro:fixed_joint name="hip_right" parent="hip" child="hip_right" y="-0.051" z="-0.004" />
->>>>>>> bugfix/joint-rotation-origin
+  <xacro:fixed_joint name="hip_right" parent="base_link" child="hip_right" y="-0.051" z="-0.004" />
   <xacro:link name="hip_right" w="0.0325" h="0.032" d="0.043" y="0" z="-0.0215" mass="0.0552" material="Black" />
   <xacro:joint name="hip_joint_right_r" aname="K" parent="hip_right" child="virtual_hip_right" z="-0.030" yaw="${-pi}" axis="x" />
   <xacro:virtual_link name="virtual_hip_right" w="0.01" h="0.01" d="0.01" z="-0.020" mass="0.0113" />
