@@ -28,7 +28,7 @@
   <xacro:link name="leg_left_1" w="0.0325" h="0.032" d="0.043" z="-0.0415" mass="0.06772" material="Black" />
   <xacro:joint name="knee_left" aname="M" parent="leg_left_1" child="leg_left_2" z="-0.051" axis="y" />
   <xacro:link name="leg_left_2" w="0.0325" h="0.032" d="0.043" z="-0.0385" mass="0.07270" material="Black" />
-  <xacro:joint name="ankle_left_r" aname="O" parent="leg_left_2" child="foot_left" z="-0.047.5" axis="x" />
+  <xacro:joint name="ankle_left_r" aname="O" parent="leg_left_2" child="foot_left" z="-0.047.5" axis="x" yaw="${-pi}" />
   <xacro:link name="foot_left" w="0.098" h="0.066" d="0.009" z="-0.0245" mass="0.05252" material="Orange" />
 
   <gazebo>
